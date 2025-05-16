@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="E_Commerce_Application.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>E-Commerce Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; }
+        .navbar { background: #222; color: #fff; padding: 8px 24px; display: flex; align-items: center; justify-content: space-between; }
+        .navbar a { color: #fff; text-decoration: none; margin: 0 12px; font-weight: 500; }
+        .navbar a:hover { text-decoration: underline; }
+        .navbar .logo { font-size: 22px; font-weight: bold; letter-spacing: 1.5px; }
+        .main-content { min-height: 70vh; padding: 24px; background: #fff; margin: 24px auto; max-width: 1100px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-radius: 8px; }
+        .footer { background: #222; color: #fff; text-align: center; padding: 12px 0; position: relative; bottom: 0; width: 100%; margin-top: 24px; }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar">
+            <span class="logo"><i class="fa fa-shopping-cart"></i> E-Shop</span>
+            <nav>
+                <a href="Home.aspx">Home</a>
+                <a href="Products.aspx">Products</a>
+                <a href="Cart.aspx">Cart</a>
+                <a href="Login.aspx">Login</a>
+                <a href="Register.aspx">Register</a>
+            </nav>
+        </div>
+        <div class="main-content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer">
+            &copy; 2024 E-Commerce Application. All rights reserved.
+        </div>
+    </form>
+</body>
+</html>
